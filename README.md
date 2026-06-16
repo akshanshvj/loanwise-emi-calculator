@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LoanWise - EMI Calculator
 
-## Getting Started
+**LoanWise** is a modern, production-ready fintech web application designed to help users calculate monthly Equated Monthly Installments (EMI), total interest payable, and total amount payable. It also generates a complete repayment amortization schedule and exports professional PDF statements on demand.
 
-First, run the development server:
+🚀 **Live Demo:** [https://loanwise-emi-calculator.vercel.app](https://loanwise-emi-calculator.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Previews
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. LoanWise Financial Dashboard
+![LoanWise Dashboard Preview](public/loanwise-dashboard.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. Repayment Amortization Schedule
+![LoanWise Amortization Schedule Preview](public/loanwise-amortization-schedule.png)
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Standard EMI Calculation:** Computes accurate EMIs instantly using standard loan parameters:
+  $$\text{EMI} = \frac{P \times r \times (1+r)^n}{(1+r)^n - 1}$$
+- **Interactive Form Inputs:** Smooth sliders synced in real-time with numeric input boxes. Toggle tenure between years and months seamlessly.
+- **Visual Analytics:** Beautiful pie charts built with Recharts displaying principal vs. interest breakdown.
+- **Interactive Amortization Table:** Scrollable table showing Month, EMI, Principal Paid, Interest Paid, and Remaining Balance. Filter by specific month numbers instantly.
+- **Professional PDF Export:** One-click download button generating clean, structured financial statements via jsPDF.
+- **Dark & Light Themes:** Elegant dark mode support with localStorage persistence and an inline blocking script to prevent theme-flickering.
+- **Copy & Share Tools:** Copy reports to clipboard in plain text or share using the Web Share API.
+- **Animated Easing Counters:** Smooth, visual loading animation for calculated values.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Framework:** Next.js (latest App Router)
+- **Language:** TypeScript (Strict Mode)
+- **Styling:** Tailwind CSS (v4)
+- **Libraries:**
+  - `recharts` (Charts)
+  - `jspdf` & `jspdf-autotable` (PDF Export)
+  - `lucide-react` (Icons)
+  - `canvas-confetti` (Celebration Effects)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Local Development
+
+Follow these steps to run the project locally:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/akshanshvj/loanwise-emi-calculator.git
+   cd loanwise-emi-calculator
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+---
+
+## Footer Details & Credits
+
+Built by **Akshansh Vijay** ([akshanshvj4803@gmail.com](mailto:akshanshvj4803@gmail.com)).
+
+[Built for Digital Heroes](https://digitalheroesco.com)
