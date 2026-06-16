@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #6366f1; /* Indigo */
+  --color-brand-secondary: #8b5cf6; /* Violet */
+  --color-brand-success: #10b981; /* Emerald */
+  --color-brand-warning: #f59e0b; /* Amber */
+  --color-brand-accent: #f43f5e; /* Rose */
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #f8fafc; /* slate-50 */
+  --foreground: #0f172a; /* slate-900 */
+  --card-bg: rgba(255, 255, 255, 0.75);
+  --card-border: rgba(226, 232, 240, 0.8);
+  --text-muted: #64748b; /* slate-500 */
+  --chart-pie-principal: #6366f1;
+  --chart-pie-interest: #f43f5e;
+}
+
+.dark {
+  --background: #090d16; /* Deep fintech navy-black */
+  --foreground: #f8fafc; /* slate-50 */
+  --card-bg: rgba(15, 23, 42, 0.75);
+  --card-border: rgba(30, 41, 59, 0.8);
+  --text-muted: #94a3b8; /* slate-400 */
+  --chart-pie-principal: #818cf8;
+  --chart-pie-interest: #fb7185;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar for amortization table */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Custom styled inputs and slider */
+input[type="range"] {
+  accent-color: #6366f1;
+}
+
+.dark input[type="range"] {
+  accent-color: #818cf8;
+}
+
+/* Soft pulse micro-animation for results */
+@keyframes soft-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(0.995);
+  }
+}
+
+.animate-soft-pulse {
+  animation: soft-pulse 2s infinite ease-in-out;
+}
+
