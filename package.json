@@ -2,6 +2,7 @@
   "name": "loanwise-emi-calculator",
   "version": "0.1.0",
   "private": true,
+  "description": "Calculate EMI, interest, repayment schedules, and loan costs instantly with LoanWise.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
